@@ -466,6 +466,7 @@ function twenty_twenty_one_scripts() {
 	//DILEWE css Files
 	wp_enqueue_style( 'site-header', get_template_directory_uri() . '/assets/css/custom/site-header.css',false,'1.1','all');
 	wp_enqueue_style( 'content-area', get_template_directory_uri() . '/assets/css/custom/content-area.css',false,'1.1','all');
+	wp_enqueue_style( 'post-header', get_template_directory_uri() . '/assets/css/custom/post-header.css',false,'1.1','all');
 }
 add_action( 'wp_enqueue_scripts', 'twenty_twenty_one_scripts' );
 
