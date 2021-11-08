@@ -1,0 +1,57 @@
+:root {
+	--color-dlw-main: #257DA7;
+	--color-dlw-overlay: #1E3E51CC;
+	--color-dlw-text-white: #F8EDF2;
+}
+
+#masthead {
+	padding-top: 0;
+	padding-bottom: 0;
+	display: block;
+	align-items: none;
+	flex-wrap: none;
+	row-gap: none;
+	background-color: white;
+	max-width: 100%;
+}
+
+.site-branding {
+	max-width: var(--responsive--alignwide-width);
+	margin-left: auto;
+	height: 85px;
+	padding-top: 22px;
+}
+
+.site-branding:last-child {
+	margin-right: auto;
+	
+}
+
+.site-title {
+	color: var(--color-dlw-main);
+}
+
+.site-title a {
+	font-size: 29px;
+	text-decoration: none;
+}
+
+.site-title a:hover {
+	color: var(--color-dlw-main);
+}
+
+header.entry-header {
+	max-width: none;
+}
+
+.entry-header .post-thumbnail {
+	width: 100%;
+	max-width: none;
+	max-height: 650px;
+}
+
+.entry-header .post-thumbnail .wp-post-image {
+	margin-top: 0;
+}
+
+

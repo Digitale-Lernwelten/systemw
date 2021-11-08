@@ -1,0 +1,32 @@
+#main {
+	padding-top: 0;
+}
+header figure.post-thumbnail {
+	display: grid; 
+	grid-template-columns: 1fr; 
+	grid-template-rows: 1fr auto; 
+	gap: 0px 0px; 
+	grid-template-areas: 
+	"image"
+    "caption"; 
+}
+
+header figure.post-thumbnail img {
+	grid-area: 1 / 1 / 3 / 2;
+	height: 100%!important;
+}
+
+header figure.post-thumbnail figcaption {
+	grid-area: caption;
+	background-color: var(--color-dlw-overlay);
+	padding-top: 38px;
+	padding-bottom: 45px;
+}
+header figure.post-thumbnail figcaption p {
+	color: var(--color-dlw-text-white);
+	font-size: 1rem;
+	line-height: 120%;
+	max-width: 1095px;
+	margin-left: auto;
+	margin-right: auto;
+}
