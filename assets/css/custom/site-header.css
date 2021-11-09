@@ -1,7 +1,27 @@
 :root {
 	--color-dlw-main: #257DA7;
+	--color-dlw-red: #A3195B;
 	--color-dlw-overlay: #1E3E51CC;
+	--color-dlw-grey: #F3F3F3;
 	--color-dlw-text-white: #F8EDF2;
+	--color-dlw-text-black: #121313;
+
+	--width-max-width: 1095px;
+
+	--font-text: 'Lato', sans-serif;
+	--font-header: 'Jura', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-header);
+}
+
+p, a, span, input {
+	font-family: var(--font-text);
+}
+
+#page {
+	background-color: var(--color-dlw-grey);
 }
 
 #masthead {
@@ -18,8 +38,15 @@
 .site-branding {
 	max-width: var(--responsive--alignwide-width);
 	margin-left: auto;
+	margin-right: auto;
 	height: 85px;
 	padding-top: 22px;
+}
+
+.site-branding h1 {
+	margin-left: auto;
+	margin-right: auto;
+	width: fit-content;
 }
 
 .site-branding:last-child {

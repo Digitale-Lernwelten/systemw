@@ -463,10 +463,23 @@ function twenty_twenty_one_scripts() {
 		true
 	);
 
-	//DILEWE css Files
+	// DILEWE css Files
+	wp_enqueue_style( 'font-jura', "https://fonts.googleapis.com/css2?family=Jura:wght@400;700&display=swap",false,'1.1','all');
+	wp_enqueue_style( 'font-lato', "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap",false,'1.1','all');
+	wp_enqueue_style( 'font-icons', "https://fonts.googleapis.com/icon?family=Material+Icons",false,'1.1','all');
+
 	wp_enqueue_style( 'site-header', get_template_directory_uri() . '/assets/css/custom/site-header.css',false,'1.1','all');
 	wp_enqueue_style( 'content-area', get_template_directory_uri() . '/assets/css/custom/content-area.css',false,'1.1','all');
 	wp_enqueue_style( 'post-header', get_template_directory_uri() . '/assets/css/custom/post-header.css',false,'1.1','all');
+
+	// DILEWE js Files
+	wp_enqueue_script(
+		'ldw-script',
+		get_template_directory_uri() . '/assets/js/custom/dlw.js',
+		array( 'twenty-twenty-one-ie11-polyfills' ),
+		wp_get_theme()->get( 'Version' ),
+		true
+	);
 }
 add_action( 'wp_enqueue_scripts', 'twenty_twenty_one_scripts' );
 
