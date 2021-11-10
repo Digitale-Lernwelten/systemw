@@ -7,6 +7,7 @@
 	--color-dlw-text-black: #121313;
 
 	--width-max-width: 1095px;
+	--width-default-max-width: var(--responsive--aligndefault-width);
 
 	--font-text: 'Lato', sans-serif;
 	--font-header: 'Jura', sans-serif;
@@ -34,6 +35,10 @@ p, a, span, input {
 	background-color: white;
 	max-width: 100%;
 }
+.entry-header > .post-thumbnail > img {
+	width: 100%!important;
+	max-width: none!important;
+}
 
 .site-branding {
 	max-width: var(--responsive--alignwide-width);
@@ -44,6 +49,13 @@ p, a, span, input {
 }
 
 .site-branding h1 {
+	margin-left: auto;
+	margin-right: auto;
+	width: fit-content;
+}
+
+.site-branding .site-title a {
+	display: block;
 	margin-left: auto;
 	margin-right: auto;
 	width: fit-content;

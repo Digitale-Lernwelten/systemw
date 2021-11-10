@@ -26,7 +26,7 @@ if ( ! function_exists( 'twenty_twenty_one_posted_on' ) ) {
 		echo '<span class="posted-on">';
 		printf(
 			/* translators: %s: Publish date. */
-			esc_html__( 'Published %s', 'twentytwentyone' ),
+			/* esc_html__( 'Published %s', 'twentytwentyone' ), */
 			$time_string // phpcs:ignore WordPress.Security.EscapeOutput
 		);
 		echo '</span>';
@@ -83,7 +83,7 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 			}
 
 			// Posted on.
-			twenty_twenty_one_posted_on();
+			// twenty_twenty_one_posted_on();
 
 			// Edit post link.
 			edit_post_link(
@@ -125,9 +125,9 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 
 			echo '<div class="posted-by">';
 			// Posted on.
-			twenty_twenty_one_posted_on();
+			// twenty_twenty_one_posted_on();
 			// Posted by.
-			twenty_twenty_one_posted_by();
+			// twenty_twenty_one_posted_by();
 			// Edit post link.
 			edit_post_link(
 				sprintf(

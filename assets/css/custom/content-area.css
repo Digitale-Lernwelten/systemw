@@ -32,8 +32,27 @@ header figure.post-thumbnail figcaption p {
 }
 
 main#main div.entry-content {
-	margin-top: 100px;
+	margin-top: 0px;
 }
+
+#main .post-info {
+	display: grid; 
+	grid-template-columns: 1fr 1fr; 
+	grid-template-rows: 1fr; 
+	gap: 0px 0px; 
+	grid-template-areas:
+		"date author";
+	margin-top: 38px;
+}
+
+.post-info span:first-child {
+	grid-area: date;
+}
+
+.post-info span:nth-child(even) {
+	grid-area: author;
+}
+
 
 main#main div.entry-content > form.search-form.search-start[role="search"] {
 	max-width: 500px;
@@ -44,6 +63,7 @@ main#main div.entry-content > form.search-form.search-start[role="search"] {
 	grid-template-areas: 
     "field submit";
 	height: 68px;
+	margin-top: 100px;
 	margin-bottom: 100px;
 	position: relative;
 }
@@ -186,4 +206,42 @@ main#main div.wp-block-query > ul.is-flex-container > li {
 	height: 96px;
 	line-height: 24px;
 	overflow: hidden;
+}
+
+.navigation .nav-links a p {
+	position: relative;
+	color: var(--color-dlw-red);
+	font-size: 1.57rem;
+}
+
+.navigation .nav-links a p:before {
+	position: absolute;
+	font-family: 'Material Icons';
+	color: var(--color-dlw-red);
+	font-size: 2rem;
+	line-height: 2.7rem;
+}
+
+.navigation .nav-links .nav-previous a p {
+	padding-left: 20px;
+}
+.navigation .nav-links .nav-next a p {
+	padding-right: 30px;
+}
+
+.navigation .nav-links .nav-previous a p:before {
+	content:"\e5e0";
+	left: 0;
+}
+
+.navigation .nav-links .nav-next a p:before {
+	content:"\e5e1";
+	right: 0;
+}
+
+.entry-content {
+	max-width: 80%;
+}
+aside#side-nav {
+	width: 20%;
 }

@@ -1,3 +1,7 @@
+body.single-post #page {
+    background-color: white;
+}
+
 body.single-post header {
     position:relative;
     display:block;
@@ -16,7 +20,7 @@ body.single-post .entry-header .header-wrap {
 
 body.single-post .entry-header .header-wrap h1 {
     width:100%;
-    max-width:930px;
+    max-width:var(--width-default-max-width);
     margin:0 auto;
     font-size:1.8em;
     color: var(--color-dlw-text-white);

@@ -12,14 +12,23 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
 	<header class="entry-header alignwide">
 		<?php the_title( '<div class="header-wrap"><h1 class="entry-title">', '</h1></div>' ); ?>
 		<?php twenty_twenty_one_post_thumbnail(); ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<section class="entry-content">
+		<div class="post-info">
+			<?php
+				// Posted on
+				twenty_twenty_one_posted_on();
+				// Posted by.
+				twenty_twenty_one_posted_by();
+			?>
+		</div>
+
 		<?php
+ 
 		the_content();
 
 		wp_link_pages(
@@ -27,11 +36,14 @@
 				'before'   => '<nav class="page-links" aria-label="' . esc_attr__( 'Page', 'twentytwentyone' ) . '">',
 				'after'    => '</nav>',
 				/* translators: %: Page number. */
-				'pagelink' => esc_html__( 'Page %', 'twentytwentyone' ),
+				//'pagelink' => esc_html__( 'Page %', 'twentytwentyone' ),
 			)
 		);
 		?>
-	</div><!-- .entry-content -->
+	</section><!-- .entry-content -->
+	<nav id="side-nav">
+		<?php get_template_part( 'template-parts/footer/sidebar-widgets' ); ?>
+	</nav>
 
 	<footer class="entry-footer default-max-width">
 		<?php twenty_twenty_one_entry_meta_footer(); ?>
@@ -40,5 +52,4 @@
 	<?php if ( ! is_singular( 'attachment' ) ) : ?>
 		<?php get_template_part( 'template-parts/post/author-bio' ); ?>
 	<?php endif; ?>
-
 </article><!-- #post-<?php the_ID(); ?> -->
