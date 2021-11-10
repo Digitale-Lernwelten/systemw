@@ -476,13 +476,11 @@ function twenty_twenty_one_scripts() {
 	);
 
 	// DILEWE css Files
-	wp_enqueue_style( 'font-jura', "https://fonts.googleapis.com/css2?family=Jura:wght@400;700&display=swap",false,'1.1','all');
-	wp_enqueue_style( 'font-lato', "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap",false,'1.1','all');
-	wp_enqueue_style( 'font-icons', "https://fonts.googleapis.com/icon?family=Material+Icons",false,'1.1','all');
-
-	wp_enqueue_style( 'site-header', get_template_directory_uri() . '/assets/css/custom/site-header.css',false,'1.1','all');
-	wp_enqueue_style( 'content-area', get_template_directory_uri() . '/assets/css/custom/content-area.css',false,'1.1','all');
-	wp_enqueue_style( 'post-header', get_template_directory_uri() . '/assets/css/custom/post-header.css',false,'1.1','all');
+	wp_enqueue_style( 'dilewe-fonts', get_template_directory_uri() . '/assets/css/custom/fonts.css',false,'1.1','all');
+	wp_enqueue_style( 'dilewe-core', get_template_directory_uri() . '/assets/css/custom/core.css',false,'1.1','all');
+	wp_enqueue_style( 'dilewe-content', get_template_directory_uri() . '/assets/css/custom/content.css',false,'1.1','all');
+	wp_enqueue_style( 'dilewe-navigation', get_template_directory_uri() . '/assets/css/custom/navigation.css',false,'1.1','all');
+	wp_enqueue_style( 'dilewe-site', get_template_directory_uri() . '/assets/css/custom/site.css',false,'1.1','all');
 
 	// DILEWE js Files
 	wp_enqueue_script(

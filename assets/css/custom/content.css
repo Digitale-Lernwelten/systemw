@@ -1,0 +1,114 @@
+
+#main {
+	padding-top: 0;
+}
+header figure.post-thumbnail {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr auto;
+	gap: 0px 0px;
+	grid-template-areas:
+	"image"
+	"caption";
+}
+
+header figure.post-thumbnail img {
+	grid-area: 1 / 1 / 3 / 2;
+	height: 100%!important;
+}
+
+header figure.post-thumbnail figcaption {
+	grid-area: caption;
+	background-color: var(--color-dlw-overlay);
+	padding-top: 38px;
+	padding-bottom: 45px;
+}
+header figure.post-thumbnail figcaption p {
+	color: var(--color-dlw-text-white);
+	font-size: 1rem;
+	line-height: 120%;
+	max-width: var(--width-max-width);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+main#main div.entry-content {
+	margin-top: 0px;
+}
+
+#main .post-info {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+	gap: 0px 0px;
+	grid-template-areas:
+		"date author";
+	margin-bottom:4rem;
+}
+
+.post-info span:first-child {
+	grid-area: date;
+}
+
+.post-info span:nth-child(even) {
+	grid-area: author;
+}
+
+body.single-post #page {
+	background-color: white;
+}
+
+body.single-post header {
+	position:relative;
+	display:block;
+}
+
+body.single-post .entry-header .header-wrap {
+	position:absolute;
+	display:block;
+	bottom:0px;
+	left:0;
+	padding:16px;
+	width:100%;
+	margin:0;
+	background:#A3195BCC;
+}
+
+body.single-post .entry-header .header-wrap h1 {
+	width:100%;
+	max-width:var(--width-default-max-width);
+	margin:0 auto;
+	font-size:1.8em;
+	color: var(--color-dlw-text-white);
+}
+
+.entry-header .post-thumbnail {
+	margin-top:0;
+}
+
+.singular .has-post-thumbnail .entry-header {
+	padding-bottom:0;
+}
+
+main#main div.entry-content > .wp-block-query {
+	max-width: 1444px;
+	width: calc(100% - 2rem);
+}
+
+main#main div.wp-block-query > ul.is-flex-container {
+	justify-content: center;
+}
+
+.post-info span:nth-child(even){
+	text-align:right;
+	color: #A3195B;
+}
+
+.post-info span:nth-child(even) a {
+	color: #A3195B;
+	text-decoration:none;
+}
+
+.entry-center > * {
+	margin-bottom:1.5rem;
+}

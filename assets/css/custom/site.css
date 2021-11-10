@@ -1,0 +1,159 @@
+#page {
+	background-color: var(--color-dlw-grey);
+}
+
+#masthead {
+	padding-top: 0;
+	padding-bottom: 0;
+	display: block;
+	align-items: none;
+	flex-wrap: none;
+	row-gap: none;
+	background-color: white;
+	max-width: 100%;
+}
+.entry-header > .post-thumbnail > img {
+	width: 100%!important;
+	max-width: none!important;
+}
+
+.site-branding {
+	max-width: var(--responsive--alignwide-width);
+	margin-left: auto;
+	margin-right: auto;
+	height: 85px;
+	padding-top: 22px;
+}
+
+.site-branding h1 {
+	margin-left: auto;
+	margin-right: auto;
+	width: fit-content;
+}
+
+.site-branding .site-title a {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: fit-content;
+}
+
+.site-branding:last-child {
+	margin-right: auto;
+
+}
+
+.site-title {
+	color: var(--color-dlw-main);
+}
+
+.site-title a {
+	font-size: 29px;
+	text-decoration: none;
+}
+
+.site-title a:hover {
+	color: var(--color-dlw-main);
+}
+
+header.entry-header {
+	max-width: none;
+}
+
+.entry-header .post-thumbnail {
+	width: 100%;
+	max-width: none;
+	max-height: 650px;
+}
+
+.entry-header .post-thumbnail .wp-post-image {
+	margin-top: 0;
+}
+
+#side-nav > aside {
+	margin-top:0;
+	padding:0;
+}
+
+#side-nav > aside > * {
+	margin-top:0;
+}
+
+#side-nav .widget-area {
+	display:block;
+
+}
+
+.widget-area ul li:before {
+	content:'';
+	display:block;
+	background: url('../../images/arrow-right.svg') no-repeat;
+	background-size:contain;
+	width:1em;
+	height:1em;
+	position:absolute;
+	left:0;
+	top:0.5em;
+}
+
+.widget-area ul li {
+	position:relative;
+	padding-left:1.5rem;
+}
+
+.single .site-main > article > .entry-footer {
+	border-top:none;
+	padding-top:0;
+}
+
+.singular .entry-header {
+	padding:0;
+	margin-bottom:0.5rem;
+}
+
+.site-main > article > .entry-content {
+	margin-top:0;
+}
+
+.entry-content {
+	display:grid;
+	grid-template-columns: 1fr 4fr 1fr;
+	grid-gap:0.5rem;
+}
+
+.entry-left {
+	grid-column: 1;
+}
+
+.entry-center {
+	grid-column: 2;
+}
+
+.entry-right {
+	grid-column: 3;
+}
+
+.footer-widgets {
+	margin-top:0;
+	padding:0;
+}
+
+.footer-widgets nav li:before {
+	display: none;
+}
+
+.footer-widgets nav li {
+	display:inline-block;
+	padding:0;
+	margin:0 1rem 0 0;
+}
+
+.footer-widgets nav li a {
+	text-decoration:none;
+	font-size:1.3rem;
+	font-family: var(--font-header);
+}
+
+.entry-content.no-cols {
+	display:block;
+}

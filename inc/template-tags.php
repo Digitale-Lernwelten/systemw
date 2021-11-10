@@ -26,7 +26,7 @@ if ( ! function_exists( 'twenty_twenty_one_posted_on' ) ) {
 		echo '<span class="posted-on">';
 		printf(
 			/* translators: %s: Publish date. */
-			/* esc_html__( 'Published %s', 'twentytwentyone' ), */
+			esc_html__( 'Erstellt am %s', 'twentytwentyone' ),
 			$time_string // phpcs:ignore WordPress.Security.EscapeOutput
 		);
 		echo '</span>';
@@ -46,7 +46,7 @@ if ( ! function_exists( 'twenty_twenty_one_posted_by' ) ) {
 			echo '<span class="byline">';
 			printf(
 				/* translators: %s: Author name. */
-				esc_html__( 'By %s', 'twentytwentyone' ),
+				esc_html__( 'Autor: %s', 'twentytwentyone' ),
 				'<a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" rel="author">' . esc_html( get_the_author() ) . '</a>'
 			);
 			echo '</span>';

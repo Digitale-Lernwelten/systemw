@@ -1,0 +1,26 @@
+:root {
+	--color-dlw-main: #257DA7;
+	--color-dlw-red: #A3195B;
+	--color-dlw-overlay: #1E3E51CC;
+	--color-dlw-grey: #F3F3F3;
+	--color-dlw-text-white: #F8EDF2;
+	--color-dlw-text-black: #121313;
+
+	--width-max-width: 1095px;
+	--width-default-max-width: var(--responsive--aligndefault-width);
+
+	--font-text: 'Montserrat', sans-serif;
+	--font-header: 'Jura', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-header);
+}
+
+body, p, a, span, input {
+	font-family: var(--font-text);
+}
+
+#masthead {
+	overflow:hidden;
+}
