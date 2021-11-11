@@ -31,7 +31,9 @@
 	<?php endif; ?>
 
 	<div class="entry-content no-cols">
-		<?php get_template_part( 'searchform' ); ?>
+		<?php /*
+		<!-- <?php get_template_part( 'searchform' ); ?>
+		*/?>
 		<?php the_content(); ?>
 		</div>
 	</div><!-- .entry-content -->

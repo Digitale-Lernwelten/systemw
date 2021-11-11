@@ -21,8 +21,8 @@
 	max-width: var(--responsive--alignwide-width);
 	margin-left: auto;
 	margin-right: auto;
-	height: 85px;
-	padding-top: 22px;
+	height: 55px;
+	padding-top: 6px;
 }
 
 .site-branding h1 {
@@ -40,7 +40,6 @@
 
 .site-branding:last-child {
 	margin-right: auto;
-
 }
 
 .site-title {
@@ -136,6 +135,18 @@ header.entry-header {
 .footer-widgets {
 	margin-top:0;
 	padding:0;
+	background-color: white;
+	width: 100%;
+	max-width: 100%;
+	display: block;
+}
+
+
+.footer-widgets section.widget {
+	max-width: var(--responsive--alignwide-width);
+	width: calc(100% - 6rem);
+	margin: 0 auto;
+	padding: 20px 0;
 }
 
 .footer-widgets nav li:before {
@@ -152,8 +163,23 @@ header.entry-header {
 	text-decoration:none;
 	font-size:1.3rem;
 	font-family: var(--font-header);
+	color: var(--color-dlw-main);
+}
+
+.footer-widgets nav li a:hover {
+	background-color: transparent;
+}
+
+.footer-widgets nav li a:visited {
+	color: var(--color-dlw-main);
 }
 
 .entry-content.no-cols {
 	display:block;
+}
+
+.site-footer {
+	background-color: white;
+	width: 100%;
+	max-width: 100%;;
 }

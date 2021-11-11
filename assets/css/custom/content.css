@@ -1,29 +1,36 @@
+#content {
+	padding-top: 55px;
+}
 
 #main {
 	padding-top: 0;
 }
-header figure.post-thumbnail {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: 1fr auto;
-	gap: 0px 0px;
-	grid-template-areas:
-	"image"
-	"caption";
+
+.singular .entry-header {
+	border-bottom: none;
 }
 
-header figure.post-thumbnail img {
-	grid-area: 1 / 1 / 3 / 2;
-	height: 100%!important;
+figure.post-thumbnail img {
+	width:100% !important;
+	height:auto !important;
+	object-fit: cover;
+	max-height:600px;
 }
 
-header figure.post-thumbnail figcaption {
-	grid-area: caption;
+body.single-post figure.post-thumbnail figcaption {
+	display: none;
+}
+
+figure.post-thumbnail figcaption {
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:100%;
 	background-color: var(--color-dlw-overlay);
 	padding-top: 38px;
 	padding-bottom: 45px;
 }
-header figure.post-thumbnail figcaption p {
+figure.post-thumbnail figcaption p {
 	color: var(--color-dlw-text-white);
 	font-size: 1rem;
 	line-height: 120%;
@@ -58,12 +65,12 @@ body.single-post #page {
 	background-color: white;
 }
 
-body.single-post header {
+body header {
 	position:relative;
 	display:block;
 }
 
-body.single-post .entry-header .header-wrap {
+body.single .entry-header .header-wrap {
 	position:absolute;
 	display:block;
 	bottom:0px;
@@ -74,12 +81,35 @@ body.single-post .entry-header .header-wrap {
 	background:#A3195BCC;
 }
 
-body.single-post .entry-header .header-wrap h1 {
+body .entry-header .header-wrap h1 {
 	width:100%;
 	max-width:var(--width-default-max-width);
 	margin:0 auto;
 	font-size:1.8em;
 	color: var(--color-dlw-text-white);
+}
+
+.entry-header h1.entry-title,
+h1.page-title {
+	font-size: 3.8rem;
+	max-width: var(--responsive--aligndefault-width);
+	width: calc(100% - 6rem);
+	margin: 30px auto;
+}
+
+.search,
+.tag {
+	background-color: var(--color-text-white);
+}
+
+.search h2.entry-title,
+.tag h2.entry-title {
+	font-size: 2rem;
+}
+
+.search .entry-header,
+.tag .entry-header {
+	max-width: var(--responsive--aligndefault-width);
 }
 
 .entry-header .post-thumbnail {
@@ -97,6 +127,11 @@ main#main div.entry-content > .wp-block-query {
 
 main#main div.wp-block-query > ul.is-flex-container {
 	justify-content: center;
+	gap: 10px 71px;
+}
+
+main#main div.wp-block-query > ul.is-flex-container li {
+	margin: 0;
 }
 
 .post-info span:nth-child(even){
@@ -111,4 +146,8 @@ main#main div.wp-block-query > ul.is-flex-container {
 
 .entry-center > * {
 	margin-bottom:1.5rem;
+}
+
+#main .wp-block-query ul > li {
+	width: 435px;
 }

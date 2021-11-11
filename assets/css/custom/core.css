@@ -5,22 +5,30 @@
 	--color-dlw-grey: #F3F3F3;
 	--color-dlw-text-white: #F8EDF2;
 	--color-dlw-text-black: #121313;
+	--text-color: #333;
 
 	--width-max-width: 1095px;
 	--width-default-max-width: var(--responsive--aligndefault-width);
 
 	--font-text: 'Montserrat', sans-serif;
 	--font-header: 'Jura', sans-serif;
+	--background-color-modal: rgba(255, 255, 255, 1);
+	--content-padding: 89px;
+	--content-width: 950px;
+	--content-padding: 64px;
+	--content-padding-half: 32px;
+	--content-padding-quarter: 16px;
+	--content-padding-eight: 8px;
+}
+html {
+	background-color: white;
 }
 
+.site-title,
 h1, h2, h3, h4, h5, h6 {
 	font-family: var(--font-header);
 }
 
 body, p, a, span, input {
 	font-family: var(--font-text);
-}
-
-#masthead {
-	overflow:hidden;
 }
