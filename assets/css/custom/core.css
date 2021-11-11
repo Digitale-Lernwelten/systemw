@@ -19,6 +19,15 @@
 	--content-padding-half: 32px;
 	--content-padding-quarter: 16px;
 	--content-padding-eight: 8px;
+
+	--entry-header--font-size: 2rem;
+	--global--font-size-page-title: 3rem;
+	--heading--font-size-h1: 3rem;
+	--heading--font-size-h2: 2.4rem;
+	--heading--font-size-h3: 1.8rem;
+
+	--headerbar-color: #257DA7;
+	--headerbar-background:#F8EDF2;
 }
 html {
 	background-color: white;
@@ -31,4 +40,21 @@ h1, h2, h3, h4, h5, h6 {
 
 body, p, a, span, input {
 	font-family: var(--font-text);
+}
+
+@media (max-width: 700px){
+	:root {
+		--entry-header--font-size: 1.6rem;
+		--global--font-size-page-title: 2.2rem;
+		--heading--font-size-h1: 2.2rem;
+		--heading--font-size-h2: 1.6rem;
+		--heading--font-size-h3: 1.3rem;
+	}
+}
+
+@media (max-width: 700px){
+	:root {
+		--global--font-size-page-title: 2rem;
+		--heading--font-size-h1: 2rem;
+	}
 }

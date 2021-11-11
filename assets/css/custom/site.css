@@ -12,17 +12,21 @@
 	background-color: white;
 	max-width: 100%;
 }
-.entry-header > .post-thumbnail > img {
-	width: 100%!important;
-	max-width: none!important;
+#main .entry-header > .post-thumbnail > img {
+	width: 100%;
+	max-width: none;
 }
 
 .site-branding {
 	max-width: var(--responsive--alignwide-width);
 	margin-left: auto;
 	margin-right: auto;
-	height: 55px;
+	height: 50px;
 	padding-top: 6px;
+}
+
+#wpadminbar {
+	position: fixed;
 }
 
 .site-branding h1 {
@@ -36,6 +40,7 @@
 	margin-left: auto;
 	margin-right: auto;
 	width: fit-content;
+	font-family: var(--font-header);
 }
 
 .site-branding:last-child {
@@ -47,7 +52,7 @@
 }
 
 .site-title a {
-	font-size: 29px;
+	font-size: var(--branding--title--font-size);
 	text-decoration: none;
 }
 
@@ -60,6 +65,10 @@ header.entry-header {
 }
 
 .entry-header .post-thumbnail {
+	max-width: var(--responsive--aligndefault-width);
+}
+
+body.singular .entry-header .post-thumbnail {
 	width: 100%;
 	max-width: none;
 	max-height: 650px;
@@ -67,6 +76,7 @@ header.entry-header {
 
 .entry-header .post-thumbnail .wp-post-image {
 	margin-top: 0;
+	margin-bottom: 0;
 }
 
 #side-nav > aside {
@@ -118,10 +128,13 @@ header.entry-header {
 	display:grid;
 	grid-template-columns: 1fr 4fr 1fr;
 	grid-gap:0.5rem;
+	max-width: var(--responsive--alignwide-width);
 }
 
 .entry-left {
 	grid-column: 1;
+	padding-right:16px;
+	box-sizing:border-box;
 }
 
 .entry-center {
@@ -130,6 +143,8 @@ header.entry-header {
 
 .entry-right {
 	grid-column: 3;
+	padding-left:16px;
+	box-sizing:border-box;
 }
 
 .footer-widgets {
@@ -182,4 +197,51 @@ header.entry-header {
 	background-color: white;
 	width: 100%;
 	max-width: 100%;;
+}
+
+@media (max-width: 800px) {
+
+	html .entry-header h1.entry-title,
+	html h1.page-title {
+		width:100%;
+		max-width: var(--responsive--aligndefault-width);
+	}
+
+	html .entry-content {
+		display:block;
+	}
+
+	html .entry-left {
+		padding-right:0;
+	}
+
+	html .entry-right {
+		padding-left:0;
+	}
+
+	#masthead .site-branding {
+		display: block;
+		width: calc(100% - 120px);
+		margin: 0 auto;
+		margin-left: auto;
+		max-width: none;
+	}
+
+	.site-branding .site-title {
+		display: block;
+		width: 100%;
+		max-width: none;
+		line-height: 43px;
+	}
+
+	.site-branding .site-title a {
+		max-width: calc(100% - 10px);
+		line-height: 43px;
+		font-size: 2rem;
+		height: 55px;
+		overflow: hidden;
+	}
+	.entry-header .post-thumbnail .wp-post-image {
+		height: 565px;
+	}
 }
