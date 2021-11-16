@@ -182,3 +182,18 @@ setTimeout(initNavBar, 0);
 	};
 	setTimeout(initNavigation, 0);
 })();
+
+/* Don't pollute the global scope if avoidable */
+(() => {
+	const initHeaderCaption = () => {
+		const header = document.querySelector("#main header.entry-header > figure");
+		const headerCaption = document.querySelector(".header-caption");
+		const container = document.createElement("DIV");
+		if(headerCaption) {
+			container.classList.add("header-overlay");
+			container.appendChild(headerCaption);
+			header.appendChild(container);
+		}
+	};
+	setTimeout(initHeaderCaption, 0);
+})();

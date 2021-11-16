@@ -110,6 +110,18 @@ body.singular .entry-header .post-thumbnail {
 	padding-left:1.5rem;
 }
 
+.widget-area a {
+	font-family: var(--font-header);
+	text-decoration: none;
+	transition: border-bottom ease-in 0.3s;
+	border-bottom: 0px dotted transparent;
+}
+
+.widget-area a:hover {
+	border-bottom: 1px dotted var(--color-dlw-main);
+	text-decoration-style: none;
+}
+
 .single .site-main > article > .entry-footer {
 	border-top:none;
 	padding-top:0;
@@ -243,5 +255,11 @@ body.singular .entry-header .post-thumbnail {
 	}
 	.entry-header .post-thumbnail .wp-post-image {
 		height: 565px;
+	}
+}
+
+@media (max-width: 700px) {
+	body.singular .entry-header .post-thumbnail {
+		max-height: 748px;
 	}
 }

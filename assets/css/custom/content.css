@@ -27,7 +27,7 @@ body.single-post figure.post-thumbnail figcaption {
 }
 
 
-.entry-content > .header-overlay {
+.entry-header .header-overlay {
 	position:absolute;
 	bottom:0;
 	left:0;
@@ -37,15 +37,17 @@ body.single-post figure.post-thumbnail figcaption {
 	padding-bottom: 45px;
 	padding-left: 1rem;
 	padding-right: 1rem;
+	margin-bottom: 16px;
 }
 
-figure.post-thumbnail figcaption p {
+.entry-header figure.post-thumbnail .header-overlay p {
 	color: var(--color-dlw-text-white);
 	font-size: 1rem;
 	line-height: 120%;
 	max-width: var(--width-max-width);
 	margin-left: auto;
 	margin-right: auto;
+	text-align: left;
 }
 
 main#main div.entry-content {
@@ -87,7 +89,7 @@ body.single .entry-header .header-wrap {
 	padding:16px;
 	width:100%;
 	margin:0;
-	background:var(--color-dlw-red);
+	background:var(--color-dlw-red-overlay);
 }
 
 body .entry-header .header-wrap h1 {
@@ -103,6 +105,12 @@ h1.page-title {
 	max-width: var(--responsive--aligndefault-width);
 	width: calc(100% - 6rem);
 	margin: 32px auto;
+}
+
+.tag .page-header {
+	border-bottom: 2px solid black;
+	margin-bottom: 0;
+	padding-bottom: 0;
 }
 
 .entry-title {
@@ -137,7 +145,7 @@ main#main div.entry-content > .wp-block-query {
 
 main#main div.wp-block-query > ul.is-flex-container {
 	justify-content: center;
-	gap: 24px 48px;
+	gap: 90px 48px;
 }
 
 main#main div.wp-block-query > ul.is-flex-container li {
@@ -187,5 +195,14 @@ main#main div.wp-block-query > ul.is-flex-container li {
 	#main .wp-block-query ul > li {
 		width: 100%;
 		max-width:400px;
+	}
+	.entry-header .header-overlay {
+		position:relative;
+		padding-top: 12px;
+		padding-bottom: 16px;
+		padding-left: 20px;
+		padding-right: 20px;
+		margin-bottom: 0px;
+		margin-top: -300px;
 	}
 }
