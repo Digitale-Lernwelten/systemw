@@ -42,12 +42,19 @@ body.single-post figure.post-thumbnail figcaption {
 
 .entry-header figure.post-thumbnail .header-overlay p {
 	color: var(--color-dlw-text-white);
-	font-size: 1rem;
-	line-height: 120%;
+	font-size: 1.26rem;
+	line-height: 130%;
 	max-width: var(--width-max-width);
 	margin-left: auto;
 	margin-right: auto;
 	text-align: left;
+}
+
+.entry-header figure.post-thumbnail .header-overlay p a {
+	color: var(--color-dlw-text-white);
+	font-size: 1.26rem;
+	line-height: 130%;
+	display: inline;
 }
 
 main#main div.entry-content {
@@ -126,6 +133,12 @@ body {
 	background-color: var(--color-text-white);
 }
 
+body.modal-active {
+    position: fixed;
+    overflow-y: scroll;
+    transition: top 300ms;
+}
+
 body .entry-header {
 	max-width: var(--responsive--aligndefault-width);
 }
@@ -170,6 +183,28 @@ main#main div.wp-block-query > ul.is-flex-container li {
 	width: 360px;
 }
 
+.entry-content section {
+	content: '';
+    display: block;
+    position: relative;
+    clear: both;
+}
+
+#main button.show-more {
+	display: block;
+	border: 0px solid white;
+	background-color: transparent;
+	font-family: var(--font-header);
+	color: var(--color-dlw-red);
+	margin: 1rem auto;
+}
+
+#main button.show-more::after {
+	content: "\e903";
+	font-family: icomoon;
+	font-size: 1.5rem;
+}
+
 @media (max-width: 1000px){
 	body.singular figure.post-thumbnail img {
 		min-height:500px;
@@ -204,5 +239,9 @@ main#main div.wp-block-query > ul.is-flex-container li {
 		padding-right: 20px;
 		margin-bottom: 0px;
 		margin-top: -300px;
+	}
+	.entry-header figure.post-thumbnail .header-overlay p {
+		font-size: 1rem;
+		line-height: 120%;
 	}
 }

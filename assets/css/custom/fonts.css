@@ -29,6 +29,38 @@
 }
 
 @font-face {
+	font-family: Lato;
+	src: url("../../fonts/Lato-Regular.woff");
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: Lato;
+	src: url("../../fonts/Lato-Italic.woff");
+	font-weight: 400;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: Lato;
+	src: url("../../fonts/Lato-Bold.woff");
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: Lato;
+	src: url("../../fonts/Lato-BoldItalic.woff");
+	font-weight: 700;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: Jura;
+	src: url("../../fonts/Jura-Bold.woff");
+	font-weight: 700;
+}
+
+@font-face {
 	font-family: Montserrat;
 	src: url("../../fonts/Montserrat-Thin.woff");
 	font-weight: 100;

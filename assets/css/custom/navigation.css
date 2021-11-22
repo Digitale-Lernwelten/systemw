@@ -417,10 +417,12 @@ aside#side-nav {
 	font-family: var(--font-header);
 	font-weight: bold;
 	font-size: 1.37rem;
-	line-height: 1.5rem;
+	line-height: 1.6rem;
 	min-height: 1.35rem;
 	color: var(--color-dlw-red);
 	overflow: hidden;
+	text-decoration: none;
+	height: 3.2rem;
 }
 
 .wp-block-post-excerpt {

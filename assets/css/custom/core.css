@@ -11,9 +11,10 @@
 	--width-max-width: 1095px;
 	--width-default-max-width: var(--responsive--aligndefault-width);
 
-	--font-text: 'Montserrat', sans-serif;
+	--font-text: 'Lato', sans-serif;
 	--font-header: 'Jura', sans-serif;
 	--background-color-modal: rgba(255, 255, 255, 1);
+	--background-color: #fff;
 	--content-padding: 89px;
 	--content-width: 950px;
 	--content-padding: 64px;
@@ -29,6 +30,9 @@
 
 	--headerbar-color: #257DA7;
 	--headerbar-background:#F8EDF2;
+
+	--box-magenta: rgb(163, 25, 91);
+	--box-blue: #22526C;
 }
 html {
 	background-color: white;
