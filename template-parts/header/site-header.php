@@ -17,6 +17,7 @@ $wrapper_classes .= has_nav_menu( 'primary' ) ? ' has-menu' : '';
 
 	<?php get_template_part( 'template-parts/header/site-branding' ); ?>
 	<button aria-label="menu" id="button-navigation"></button>
+	<button aria-label="zum IDRH" id="button-idrh" title="zum IDRH"></button>
 
 </header><!-- #masthead -->
 

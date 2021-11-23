@@ -154,6 +154,12 @@ body .entry-header .post-thumbnail {
 main#main div.entry-content > .wp-block-query {
 	max-width: var(--responsive--alignwide-width);
 	width: calc(100% - 2rem);
+	max-height: 985px;
+	transition: max-height 2s ease-in-out;
+}
+
+main#main div.entry-content > .wp-block-query.open {
+	max-height: 999985px;
 }
 
 main#main div.wp-block-query > ul.is-flex-container {
@@ -197,12 +203,25 @@ main#main div.wp-block-query > ul.is-flex-container li {
 	font-family: var(--font-header);
 	color: var(--color-dlw-red);
 	margin: 1rem auto;
+	position: relative;
 }
 
 #main button.show-more::after {
+	position: absolute;
 	content: "\e903";
 	font-family: icomoon;
 	font-size: 1.5rem;
+	bottom: -10px;
+	left: 45%;
+	transition: bottom 0.3s ease-in-out;
+}
+
+#main button.show-more:hover:after {
+	bottom: -15px;
+}
+
+#main button.show-more.hide {
+	display: none;
 }
 
 @media (max-width: 1000px){

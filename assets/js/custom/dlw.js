@@ -32,7 +32,13 @@ setTimeout(initNavBar, 0);
 /* Don't pollute the global scope if avoidable */
 (() => {
 	const initNavigation = () => {
-		const navUl = document.querySelectorAll("nav > ul ul");
+		const navUl = document.querySelectorAll("nav > div > ul ul");
+		const subMenu = document.querySelectorAll("nav > div > ul ul.sub-menu");
+		if (subMenu) {
+			for (let i = 0; i < subMenu.length; i++) {
+				subMenu[i].classList.remove("sub-menu");
+			}
+		}
 
 		const showNavigationActive = ele => {
 			if((ele === null) || ((ele.tagName !== "UL") && (ele.tagName !== "LI"))){return;}
@@ -135,8 +141,6 @@ setTimeout(initNavBar, 0);
 		const cardcontainer = document.querySelector(".wp-block-query");
 		const hiddenElements = document.querySelector(".wp-block-query.more ul");
 
-		
-
 		if (cardcontainer && section) {
 
 			const toggleMore = () => {
@@ -147,15 +151,16 @@ setTimeout(initNavBar, 0);
 						hiddenElements.firstElementChild.classList.add("new-card");
 						lastCard.parentNode.insertBefore(hiddenElements.firstElementChild, lastCard.nextElementSibling);
 					}
-				};
+					cardcontainer.classList.add("open");
+					showMoreButton.classList.add("hide");
+				};	
 			}
 
 			const showMoreButton = document.createElement("BUTTON");
 			showMoreButton.classList.add("show-more");
-			showMoreButton.innerHTML = "mehr anzeigen";
+			showMoreButton.innerHTML = "Alle anzeigen";
 			showMoreButton.addEventListener("click", toggleMore);
 			cardcontainer.parentNode.insertBefore(showMoreButton, cardcontainer.nextSibling);
-
 		}
 	};
 	setTimeout(initHidenEntries, 0);

@@ -32,8 +32,7 @@ let blurredSections = [];
 			for (let i = 0; i < entryCenter.children.length; i++) {
 				blurredSections.push(entryCenter.children[i]);
 			}
-		}
-		if (entryContent) {
+		} else if (entryContent) {
 			for (let i = 0; i < entryContent.children.length; i++) {
 				blurredSections.push(entryContent.children[i]);
 			}
@@ -93,8 +92,14 @@ const hideOverlay = () => {
 	const initOverlay = () => {
 		overlayElement = document.createElement("PAGE-OVERLAY");
 		article = document.querySelector("article");
+		page = document.querySelector("#page");
 
-		article.appendChild(overlayElement);
+		if (article) {
+			article.appendChild(overlayElement);
+		} else if (page) {
+			page.appendChild(overlayElement);
+		}
+		
 		overlayElement.addEventListener("click", hideOverlay);
 		// This is important so we can set scrollTop before leaving the site
 		// because most browsers save the scrollTop position and restore it when using the history

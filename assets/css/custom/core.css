@@ -2,7 +2,7 @@
 	--color-dlw-main: #257DA7;
 	--color-dlw-red: #A3195B;
 	--color-dlw-red-overlay: #A3195BCC;
-	--color-dlw-overlay: #1E3E51CC;
+	--color-dlw-overlay: #1E3E51EE;
 	--color-dlw-grey: #F3F3F3;
 	--color-dlw-text-white: #F8EDF2;
 	--color-dlw-text-black: #121313;
@@ -45,6 +45,10 @@ h1, h2, h3, h4, h5, h6 {
 
 body, p, a, span, input {
 	font-family: var(--font-text);
+}
+
+body {
+	width: 100%;
 }
 
 @media (max-width: 700px){

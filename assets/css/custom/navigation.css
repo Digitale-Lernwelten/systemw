@@ -94,6 +94,27 @@ aside#navigation > nav > ul {
 	overflow-y:scroll;
 }
 
+#button-idrh {
+	display: block;
+	position: absolute;
+	right: 15px;
+	top: 10px;
+	width: 32px;
+	height: 32px;
+	text-align:center;
+	vertical-align:middle;
+	appearance:none;
+	border:none;
+	background:none;
+	cursor:pointer;
+	color: inherit;
+	font-size:1.3em;
+	text-decoration: none;
+	padding: 0 15px 0 0;
+	background-image: url("../../images/idrh_logo.png");
+	background-size: cover;
+}
+
 @media only screen and (max-width: 800px) {
 	aside#navigation > nav > ul {
 		height: calc(100% - 40px);
@@ -120,6 +141,8 @@ nav.primary-navigation > div > .menu-wrapper {
 	display: block;
 	justify-content: none;
 	flex-wrap: none;
+	overflow-y: scroll;
+	height: calc(100vh - 150px);
 }
 
 #navigation nav li.menu-item a {
@@ -175,10 +198,10 @@ nav nav-toggle {
 	font-family: icomoon, sans-serif;
 	position:absolute;
 	left:2vw;
-	top:0.65em;
+	top:0.75em;
 	width: 32px;
 	height: 32px;
-	background-image: url("/resources/svg/arrow-right.svg");
+	background-image: url("../../images/arrow-right.svg");
 	background-repeat: no-repeat;
 	background-clip: content-box;
 	background-size: 100%;
@@ -217,7 +240,7 @@ nav-close-button {
 	text-align:center;
 	cursor:pointer;
 	font-size:2em;
-	background-image: url(/resources/svg/close.svg);
+	background-image: url("../../images/close.svg");
 	background-position-x: center;
 	background-position-y: center;
 	background-repeat: no-repeat;
@@ -264,7 +287,7 @@ html body #main form[role="search"] > div {
 	position:relative;
 }
 
-html body #main form[role="search"] button[type="submit"] {
+html body #main form[role="search"] [type="submit"] {
 	display: block;
 	margin: 0;
 	background:url("../../images/button-search.png") no-repeat var(--color-dlw-red);
@@ -279,7 +302,6 @@ html body #main form[role="search"] button[type="submit"] {
 	border: none !important;
 	position:absolute;
 	right:0;
-	top:0;
 	color:transparent;
 }
 
@@ -337,9 +359,23 @@ html body #main form[role="search"] button[type="submit"] {
 	border-top: 1px solid var(--color-dlw-main);
 }
 
+#site-navigation .menu-item-type-taxonomy ul li,
+#site-navigation .menu-item-object-post ul li {
+	border-top: none;
+}
+
 #site-navigation .menu-item-type-taxonomy + .menu-item-type-taxonomy,
 #site-navigation .menu-item-object-post + .menu-item-object-post {
 	border-top:none;
+	position: relative;
+}
+
+.primary-navigation[role="navigation"] .primary-menu-container > ul > .menu-item {
+	display: block;
+}
+
+.primary-navigation[role="navigation"] .primary-menu-container > ul ul {
+	padding-left: 0;
 }
 
 .entry-content {
