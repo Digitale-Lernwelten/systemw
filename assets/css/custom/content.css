@@ -224,6 +224,11 @@ main#main div.wp-block-query > ul.is-flex-container li {
 	display: none;
 }
 
+#main article .wp-block-lazyblock-aufklappkasten {
+	margin-top: 2rem;
+	margin-top: 2rem;
+}
+
 @media (max-width: 1000px){
 	body.singular figure.post-thumbnail img {
 		min-height:500px;
@@ -259,7 +264,8 @@ main#main div.wp-block-query > ul.is-flex-container li {
 		margin-bottom: 0px;
 		margin-top: -300px;
 	}
-	.entry-header figure.post-thumbnail .header-overlay p {
+	.entry-header figure.post-thumbnail .header-overlay p,
+	.entry-header figure.post-thumbnail .header-overlay p a {
 		font-size: 1rem;
 		line-height: 120%;
 	}

@@ -123,11 +123,9 @@ setTimeout(initNavBar, 0);
 (() => {
 	const initHeaderCaption = () => {
 		const header = document.querySelector("#main header.entry-header > figure");
-		const headerCaption = document.querySelector(".header-caption");
-		const container = document.createElement("DIV");
-		if(headerCaption) {
-			container.classList.add("header-overlay");
-			container.appendChild(headerCaption);
+		const container = document.querySelector(".header-overlay");
+		
+		if(container) {
 			header.appendChild(container);
 		}
 	};

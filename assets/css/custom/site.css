@@ -20,7 +20,7 @@
 .site-branding {
 	max-width: var(--responsive--alignwide-width);
 	margin-left: auto;
-	margin-right: auto;
+	margin-right: 114px;
 	height: 50px;
 	padding-top: 6px;
 }
@@ -246,9 +246,8 @@ body.singular .entry-header .post-thumbnail {
 
 	#masthead .site-branding {
 		display: block;
-		width: calc(100% - 120px);
-		margin: 0 auto;
-		margin-left: auto;
+		width: calc(100% - 168px);
+		margin: 0 114px 0 58px;
 		max-width: none;
 	}
 
