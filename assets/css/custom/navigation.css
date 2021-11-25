@@ -89,11 +89,6 @@ aside#navigation > nav {
 	height:100%;
 }
 
-aside#navigation > nav > ul {
-	height:100%;
-	overflow-y:scroll;
-}
-
 #button-idrh {
 	display: block;
 	position: absolute;
@@ -102,7 +97,6 @@ aside#navigation > nav > ul {
 	width: 84px;
 	height: 32px;
 	text-align:center;
-	vertical-align:middle;
 	appearance:none;
 	border:none;
 	background:none;
@@ -141,8 +135,6 @@ nav.primary-navigation > div > .menu-wrapper {
 	display: block;
 	justify-content: none;
 	flex-wrap: none;
-	overflow-y: scroll;
-	height: calc(100vh - 150px);
 }
 
 #navigation nav li.menu-item a {
@@ -168,6 +160,10 @@ nav li a p {
 
 nav > ul > li > a {
 	font-weight: bold;
+}
+
+#navigation nav li.menu-item ul {
+	padding-left: 16px;
 }
 
 nav li li a { padding-left:calc(var(--content-padding) * 2); }
@@ -539,12 +535,15 @@ nav-close-button {
 	background-origin: padding-box;
 	background-clip: border-box;
 	background-size: cover;
+	margin-bottom: 8px;
 }
 
 .primary-navigation > .primary-menu-container {
 	width:100%;
 	box-sizing:border-box;
 	margin:0;
+	height: calc(100% - 4px);
+	overflow-y: scroll;
 }
 
 @media (max-width: 800px) {
@@ -555,20 +554,28 @@ nav-close-button {
 		visibility: visible;
 		opacity: 1;
 		background-color: white;
-		height: 100%;
+		height: calc(100% - 20px);
+		position: relative;
+		padding: 0;
+		transform: unset;
 	}
 	.admin-bar .primary-navigation > .primary-menu-container {
 		height: calc(100% - 100px);
+		padding-left: 0;
+		padding-right: 0;
 	}
 	.menu-wrapper.hidden {
 		visibility: visible;
 	}
 	#navigation nav li.menu-item a {
-		padding: 10px 10px;
+		padding: 10px 10px 10px 46px;
+	}
+	nav nav-toggle {
+		left: 1vw;
+		top: 0.28em;
 	}
 
 	nav.primary-navigation > div > .menu-wrapper {
-		overflow-y: scroll;
 		padding-bottom: 10px;
 		padding-top: 10px;
 	}
@@ -576,5 +583,11 @@ nav-close-button {
 	nav-close-button {
 		z-index: 2002;
 		bottom: 8px;
+	}
+}
+
+@media (max-width: 428px) {
+	.wp-block-post-featured-image {
+		height: 44vw;
 	}
 }

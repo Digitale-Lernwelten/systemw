@@ -22,7 +22,7 @@
 	margin-left: auto;
 	margin-right: 114px;
 	height: 50px;
-	padding-top: 6px;
+	padding-top: 4px;
 }
 
 #wpadminbar {
@@ -33,6 +33,7 @@
 	margin-left: auto;
 	margin-right: auto;
 	width: fit-content;
+	line-height: 36px;
 }
 
 .site-branding .site-title a {
@@ -41,6 +42,7 @@
 	margin-right: auto;
 	width: fit-content;
 	font-family: var(--font-header);
+	line-height: 36px;
 }
 
 .site-branding:last-child {
@@ -222,6 +224,13 @@ body.singular .entry-header .post-thumbnail {
 	background-color: white;
 	width: 100%;
 	max-width: 100%;;
+}
+
+@media (max-width: 830px) {
+	.site-branding {
+		margin-left: 62px;
+		margin-right: 114px;
+	}
 }
 
 @media (max-width: 800px) {
