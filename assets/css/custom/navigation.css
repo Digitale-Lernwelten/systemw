@@ -137,7 +137,7 @@ nav.primary-navigation > div > .menu-wrapper {
 	flex-wrap: none;
 }
 
-#navigation nav li.menu-item a {
+#navigation nav li a {
 	display:block;
 	width:100%;
 	padding:calc(var(--content-padding-half)) var(--content-padding);
@@ -149,7 +149,7 @@ nav.primary-navigation > div > .menu-wrapper {
 	font-weight: normal;
 }
 
-#navigation nav li.menu-item a:focus {
+#navigation nav li a:focus {
 	outline: 0 solid transparent;
 	background: transparent;
 }
@@ -162,8 +162,13 @@ nav > ul > li > a {
 	font-weight: bold;
 }
 
-#navigation nav li.menu-item ul {
+#navigation nav li ul {
 	padding-left: 16px;
+}
+
+#navigation nav li li a {
+	padding-top: 8px;
+	padding-bottom: 8px;
 }
 
 nav li li a { padding-left:calc(var(--content-padding) * 2); }
@@ -351,8 +356,7 @@ html body #main form[role="search"] [type="submit"] {
 	padding-bottom: 1px;
 }
 
-#site-navigation .menu-item-type-taxonomy,
-#site-navigation .menu-item-object-post {
+#site-navigation .menu-item-has-children {
 	border-top: 1px solid var(--color-dlw-main);
 }
 
@@ -361,7 +365,7 @@ html body #main form[role="search"] [type="submit"] {
 	border-top: none;
 }
 
-#site-navigation .menu-item-type-taxonomy + .menu-item-type-taxonomy,
+#site-navigation .menu-item-has-children + .menu-item-has-children,
 #site-navigation .menu-item-object-post + .menu-item-object-post {
 	border-top:none;
 	position: relative;
@@ -584,6 +588,10 @@ nav-close-button {
 	nav-close-button {
 		z-index: 2002;
 		bottom: 8px;
+	}
+
+	#navigation nav li a {
+		padding: 8px 8px 8px 44px;
 	}
 }
 

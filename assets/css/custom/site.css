@@ -18,8 +18,8 @@
 }
 
 .site-branding {
-	max-width: var(--responsive--alignwide-width);
-	margin-left: auto;
+	max-width: 100%;
+	margin-left: 66px;
 	margin-right: 114px;
 	height: 50px;
 	padding-top: 4px;
@@ -30,10 +30,11 @@
 }
 
 .site-branding h1 {
+	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	width: fit-content;
 	line-height: 36px;
+	text-align: center;
 }
 
 .site-branding .site-title a {
