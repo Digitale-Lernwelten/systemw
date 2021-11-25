@@ -164,7 +164,7 @@ main#main div.entry-content > .wp-block-query.open {
 
 main#main div.wp-block-query > ul.is-flex-container {
 	justify-content: center;
-	gap: 90px 48px;
+	gap: 4rem 48px;
 }
 
 main#main div.wp-block-query > ul.is-flex-container li {
@@ -226,8 +226,27 @@ main#main div.wp-block-query > ul.is-flex-container li {
 
 #main article .wp-block-lazyblock-aufklappkasten {
 	margin-top: 2rem;
-	margin-top: 2rem;
+	margin-bottom: 3rem;
 }
+
+figure.wp-block-video {
+	margin-top: 2rem;
+	margin-bottom: 3rem;
+}
+
+.wp-block-lazyblock-aufklappkasten  p {
+	line-height: 1.7rem;
+}
+
+#main .entry-content > h3 {
+	color: var(--color-dlw-red);
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	padding-left: 16px;
+	max-width: var(--responsive--alignwide-width);
+	width: calc(100% - 2rem);
+}
+
 
 @media (max-width: 1000px){
 	body.singular figure.post-thumbnail img {

@@ -258,8 +258,8 @@ nav-close-button {
 #main form[role="search"] {
 	max-width: 420px;
 	height: 68px;
-	margin:76px auto 122px auto;
-	padding:1rem 0;
+	margin: 2rem auto 4rem auto;
+	padding:0 0;
 	position: relative;
 }
 
@@ -287,7 +287,8 @@ html body #main form[role="search"] [type="submit"] {
 	display: block;
 	margin: 0;
 	background:url("../../images/button-search.png") no-repeat var(--color-dlw-red);
-	background-size:contain;
+	background-size: 70%;
+	background-position: center;
 	color: var(--color-dlw-text-white);
 	font-family: var(--font-header);
 	font-size: 1.2rem;

@@ -9,6 +9,9 @@
  * @since Twenty Twenty-One 1.0
  */
 
+// this enables versioncontrole to specific version
+// comment out or change version to override browser caches
+
 // This theme requires WordPress 5.3 or later.
 if ( version_compare( $GLOBALS['wp_version'], '5.3', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
