@@ -278,6 +278,14 @@
 	font-display: block;
 }
 
+@font-face {
+	font-family: 'Material Icons';
+	src:  url('../../fonts/Material-Icons.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: block;
+}
+
 /* Just as a reminder for the codepoints used
 .icon-pause:before {content: "\e908";}
 .icon-play_arrow:before {content: "\e909";}

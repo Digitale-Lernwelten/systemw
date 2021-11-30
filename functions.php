@@ -519,16 +519,9 @@ function twenty_twenty_one_scripts() {
 		wp_get_theme()->get( 'Version' ),
 		true
 	);
-
-	wp_enqueue_script(
-		'backend-script',
-		get_template_directory_uri() . '/assets/js/custom/backend.js',
-		array( 'twenty-twenty-one-ie11-polyfills' ),
-		wp_get_theme()->get( 'Version' ),
-		true
-	);
 }
 add_action( 'wp_enqueue_scripts', 'twenty_twenty_one_scripts' );
+
 
 /**
  * Enqueue block editor script.

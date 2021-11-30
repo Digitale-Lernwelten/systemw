@@ -471,13 +471,13 @@ aside#side-nav {
 	margin: 0 0 0 0;
 	font-family: var(--font-header);
 	font-weight: bold;
-	font-size: 1.37rem;
-	line-height: 1.6rem;
+	font-size: 22px;
+	line-height: 26px;
 	min-height: 1.35rem;
 	color: var(--color-dlw-red);
 	overflow: hidden;
 	text-decoration: none;
-	height: 3.2rem;
+	height: 54px;
 }
 
 .wp-block-post-excerpt {
