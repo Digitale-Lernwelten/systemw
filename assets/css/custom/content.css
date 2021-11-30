@@ -308,4 +308,29 @@ figure.wp-block-video {
 	h1.page-title {
 		font-size: 1.7em;
 	}
+
+	.tag .page-header,
+	.search .page-header,
+	.category .page-header {
+		border-bottom: none;
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+
+	.tag .page-header h1,
+	.search .page-header h1,
+	.category .page-header h1 {
+		margin: 1rem auto;
+
+	}
+	.search-result-count {
+		margin: 0.5rem auto;
+		border-bottom: 1px solid black;
+	}
+
+	.tag article,
+	.search article,
+	.category article {
+		margin-top: 1rem;
+	}
 }

@@ -13,7 +13,7 @@ fswait () {
 }
 
 syncfiles () {
-	rsync -avhe ssh ./ dev.dilewe.de:/var/www/html/dilewe.de/hessen-mediathek/web/wp-content/themes/systemw/
+	rsync -avhe ssh ./ dev.dilewe.de:/var/www/html/russlanddeutsche-hessen.de/mediathek/web/wp-content/themes/systemw/
 	if [ $? -ne 0 ]; then
 		exit
 	fi

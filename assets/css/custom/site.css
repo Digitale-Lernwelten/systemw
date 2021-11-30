@@ -19,8 +19,8 @@
 
 .site-branding {
 	max-width: 100%;
-	margin-left: 66px;
-	margin-right: 114px;
+	margin-left: 64px;
+	margin-right: 64px;
 	height: 50px;
 	padding-top: 4px;
 }
@@ -250,8 +250,8 @@ body.singular .entry-header .post-thumbnail {
 
 @media (max-width: 830px) {
 	.site-branding {
-		margin-left: 62px;
-		margin-right: 114px;
+		margin-left: 64px;
+		margin-right: 64px;
 	}
 }
 
@@ -277,8 +277,8 @@ body.singular .entry-header .post-thumbnail {
 
 	#masthead .site-branding {
 		display: block;
-		width: calc(100% - 168px);
-		margin: 0 114px 0 58px;
+		width: calc(100% - 128px);
+		margin: 0 64px 0 64px;
 		max-width: none;
 	}
 
@@ -286,7 +286,7 @@ body.singular .entry-header .post-thumbnail {
 		display: block;
 		width: 100%;
 		max-width: none;
-		line-height: 43px;
+		line-height: 46px;
 	}
 
 	.site-branding .site-title a {

@@ -27,10 +27,10 @@
 
 #button-navigation {
 	position: absolute;
-	left: 0;
+	left: 16px;
 	top: 0;
-	width: 32px;
-	height: 32px;
+	width: 52px;
+	height: 54px;
 	text-align:center;
 	vertical-align:middle;
 	appearance:none;
@@ -50,6 +50,9 @@
 	font-family:'icomoon';
 	color: var(--color-dlw-main);
 	line-height: 55px;
+	position: absolute;
+	left: 0;
+	top: 0;
 }
 
 #button-navigation:focus {
@@ -92,10 +95,10 @@ aside#navigation > nav {
 #button-idrh {
 	display: block;
 	position: absolute;
-	right: 15px;
-	top: 17px;
-	width: 54px;
-	height: 20px;
+	right: 16px;
+	top: 20px;
+	width: 42px;
+	height: 16px;
 	text-align:center;
 	appearance:none;
 	border:none;
