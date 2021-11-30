@@ -93,9 +93,9 @@ aside#navigation > nav {
 	display: block;
 	position: absolute;
 	right: 15px;
-	top: 10px;
-	width: 84px;
-	height: 32px;
+	top: 17px;
+	width: 54px;
+	height: 20px;
 	text-align:center;
 	appearance:none;
 	border:none;
@@ -282,6 +282,7 @@ html body #main form[role="search"] input[type="search"] {
 	padding-right:86px;
 	width:100%;
 	height:68px;
+	outline: none;
 }
 
 html body #main form[role="search"] > div {
@@ -291,9 +292,6 @@ html body #main form[role="search"] > div {
 html body #main form[role="search"] [type="submit"] {
 	display: block;
 	margin: 0;
-	background:url("../../images/button-search.png") no-repeat var(--color-dlw-red);
-	background-size: 70%;
-	background-position: center;
 	color: var(--color-dlw-text-white);
 	font-family: var(--font-header);
 	font-size: 1.2rem;
@@ -305,6 +303,23 @@ html body #main form[role="search"] [type="submit"] {
 	position:absolute;
 	right:0;
 	color:transparent;
+}
+
+html body #main form[role="search"] [type="submit"]::after {
+	content:"";
+	position:absolute; /* stretch a fixed position to the whole screen */
+	top:0;
+	height:100%; /* fix for mobile browser address bar appearing disappearing */
+	left:0;
+	right:0;
+	z-index:-1; /* needed to keep in the background */
+	background: url("../../images/button-search.png") center center;
+	background-color: var(--color-dlw-red);
+	-webkit-background-size: 70%;
+	-moz-background-size: 70%;
+	-o-background-size: 70%;
+	background-size: 70%;
+	background-repeat: no-repeat;
 }
 
 .search-wrap {

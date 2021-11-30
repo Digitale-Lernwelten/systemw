@@ -132,6 +132,44 @@ setTimeout(initNavBar, 0);
 	setTimeout(initHeaderCaption, 0);
 })();
 
+//wraps Mediathek for mobile
+(() => {
+	const initTitle = () => {
+		const title = document.querySelector(".site-title");
+
+		const getText = node => {
+			if (!node) { return; }
+			if (node.hasChildNodes()) {
+				return getText(node.firstChild);
+			} else {
+				return node.textContent;
+			}
+		}
+		
+		if(title) {
+			const titleText = getText(title).split("Mediathek");
+			if(titleText.length === 2) {
+				const text = document.createTextNode("Mediathek");
+				const span = document.createElement("SPAN");
+				const anker = document.createElement("A");
+				span.classList.add("hide-mobile");
+				span.innerHTML = titleText[1];
+				anker.setAttribute("href", "/");
+				title.innerHTML = "";
+				title.appendChild(text);
+				title.appendChild(span);
+				const titleParent = title.parentElement;
+				if (titleParent) {
+					anker.appendChild(title);
+					titleParent.appendChild(anker);	
+				}
+			}
+		}
+	};
+	setTimeout(initTitle, 0);
+})();
+
+
 /* shows the hidden Entries */
 (() => {
 	const initHidenEntries = () => {
@@ -158,7 +196,9 @@ setTimeout(initNavBar, 0);
 			showMoreButton.classList.add("show-more");
 			showMoreButton.innerHTML = "Alle anzeigen";
 			showMoreButton.addEventListener("click", toggleMore);
-			cardcontainer.parentNode.insertBefore(showMoreButton, cardcontainer.nextSibling);
+			if (hiddenElements) {
+				cardcontainer.parentNode.insertBefore(showMoreButton, cardcontainer.nextSibling);
+			}
 		}
 	};
 	setTimeout(initHidenEntries, 0);

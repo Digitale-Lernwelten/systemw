@@ -23,6 +23,7 @@ section[content-type="box"] > inner-content > details {
 
 section[content-type="box"] > inner-content > details > summary {
 	display: flex;
+	position: relative;
 	justify-content: space-between;
 	align-items: center;
 	padding: var(--content-padding-quarter) var(--content-padding);
@@ -149,7 +150,7 @@ box-content > footer {
 
 @media screen and (max-width: 750px) {
 	section[content-type="box"] > inner-content > details > summary {
-		padding: var(--content-padding-quarter) var(--content-padding);
+		padding: var(--content-padding-quarter) var(--content-padding-quarter);
 		padding-right: 105px;
 	}
 
@@ -157,9 +158,17 @@ box-content > footer {
 	section[content-type="box"] > inner-content > details > summary::after {
 		right: 35px;
 	}
+
+	box-content {
+		padding: var(--content-padding-half) var(--content-padding-quarter);
+	}
 }
 
 @media screen and (max-width: 650px) {
+	.box-wrap.active {
+		width: 100%;
+		max-width: calc(100% - 32px);
+	}
 	section[content-type="box"] > inner-content > details > summary::before,
 	section[content-type="box"] > inner-content > details > summary::after {
 		right: 30px;

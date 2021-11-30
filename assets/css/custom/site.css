@@ -54,6 +54,11 @@
 	color: var(--color-dlw-main);
 }
 
+p.site-title {
+	line-height: 36px;
+	text-align: center;
+}
+
 .site-title a {
 	font-size: var(--branding--title--font-size);
 	text-decoration: none;
@@ -61,6 +66,15 @@
 
 .site-title a:hover {
 	color: var(--color-dlw-main);
+}
+
+.site-branding span.hide-mobile {
+	font-family: var(--font-header);
+	display: inline;
+}
+
+.site-branding a {
+	text-decoration: none;
 }
 
 header.entry-header {
@@ -226,6 +240,13 @@ body.singular .entry-header .post-thumbnail {
 	width: 100%;
 	max-width: 100%;;
 }
+
+@media (max-width: 900px) {
+	.site-branding span.hide-mobile {
+		display: none;
+	}
+}
+
 
 @media (max-width: 830px) {
 	.site-branding {

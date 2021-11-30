@@ -485,6 +485,7 @@ function twenty_twenty_one_scripts() {
 	wp_enqueue_style( 'dilewe-navigation', get_template_directory_uri() . '/assets/css/custom/navigation.css',false,'1.1','all');
 	wp_enqueue_style( 'dilewe-site', get_template_directory_uri() . '/assets/css/custom/site.css',false,'1.1','all');
 	wp_enqueue_style( 'dilewe-box', get_template_directory_uri() . '/assets/css/custom/box.css',false,'1.1','all');
+	wp_enqueue_style( 'dilewe-backend', get_template_directory_uri() . '/assets/css/custom/backend.css',false,'1.1','all');
 
 	// DILEWE js Files
 	wp_enqueue_script(
@@ -514,6 +515,14 @@ function twenty_twenty_one_scripts() {
 	wp_enqueue_script(
 		'box-script',
 		get_template_directory_uri() . '/assets/js/custom/box.js',
+		array( 'twenty-twenty-one-ie11-polyfills' ),
+		wp_get_theme()->get( 'Version' ),
+		true
+	);
+
+	wp_enqueue_script(
+		'backend-script',
+		get_template_directory_uri() . '/assets/js/custom/backend.js',
 		array( 'twenty-twenty-one-ie11-polyfills' ),
 		wp_get_theme()->get( 'Version' ),
 		true

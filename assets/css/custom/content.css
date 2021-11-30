@@ -98,6 +98,13 @@ body.single .entry-header .header-wrap {
 	margin:0;
 	background:var(--color-dlw-red-overlay);
 }
+.tag .page-header,
+.search .page-header,
+.category .page-header {
+	border-bottom: 2px solid var(--global--color-border);
+	padding-bottom: 2rem;
+	margin-bottom: 2rem;
+}
 
 body .entry-header .header-wrap h1 {
 	width:100%;
@@ -112,6 +119,13 @@ h1.page-title {
 	max-width: var(--responsive--aligndefault-width);
 	width: calc(100% - 6rem);
 	margin: 32px auto;
+	font-size: 1.7rem;
+}
+
+h1.page-title span {
+	font-family: var(--font-header);
+	font-size: 1.7rem;
+	font-weight: bold;
 }
 
 .tag .page-header {
@@ -287,5 +301,11 @@ figure.wp-block-video {
 	.entry-header figure.post-thumbnail .header-overlay p a {
 		font-size: 1rem;
 		line-height: 120%;
+	}
+	.entry-content .wp-block-lazyblock-aufklappkasten {
+		width: 100%;
+	}
+	h1.page-title {
+		font-size: 1.7em;
 	}
 }
