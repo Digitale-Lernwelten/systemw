@@ -223,6 +223,10 @@ body.singular .entry-header .post-thumbnail {
 	color: var(--color-dlw-main);
 }
 
+.footer-widgets nav li a:link {
+	color: var(--color-dlw-main);
+}
+
 .footer-widgets nav li a:hover {
 	background-color: transparent;
 }
