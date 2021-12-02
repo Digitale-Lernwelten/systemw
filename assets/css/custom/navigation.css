@@ -467,17 +467,18 @@ aside#side-nav {
 }
 
 .wp-block-post-title a {
-	display: block;
+	display: flex;
+	align-content: flex-start;
 	margin: 0 0 0 0;
-	font-family: var(--font-header);
+	font-family: var(--font-text);
 	font-weight: bold;
-	font-size: 22px;
-	line-height: 26px;
+	font-size: 20px;
+	line-height: 22px;
 	min-height: 1.35rem;
 	color: var(--color-dlw-red);
 	overflow: hidden;
 	text-decoration: none;
-	height: 54px;
+	height: 52px;
 }
 
 .wp-block-post-excerpt {

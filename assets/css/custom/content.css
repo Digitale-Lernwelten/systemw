@@ -166,6 +166,7 @@ body .entry-header .post-thumbnail {
 }
 
 main#main div.entry-content > .wp-block-query {
+	margin-top: 1rem;
 	max-width: var(--responsive--alignwide-width);
 	width: calc(100% - 2rem);
 	max-height: 985px;
@@ -188,15 +189,15 @@ main#main div.wp-block-query > ul.is-flex-container li {
 span.media-icon {
 	position: relative;
 	line-height: 26px;
-	overflow: hidden;
-	text-align: center;
+	text-align: left;
+	margin-right: 14px;
+	margin-top: -2px;
 }
 
 span.media-icon::before {
 	content: "";
 	font-family: "Material Icons";
 	font-size: 26px;
-	vertical-align: -19%;
 	position: relative;
 }
 span.media-icon.bild::before {
@@ -286,13 +287,27 @@ figure.wp-block-video {
 	color: var(--color-dlw-red);
 	margin-top: 2rem;
 	margin-bottom: 2rem;
+}
+
+#main .entry-content > h3.query-header {
 	padding-left: 16px;
 	max-width: var(--responsive--alignwide-width);
 	width: calc(100% - 2rem);
+	margin-bottom: 1rem;
+	font-weight: bold;
 }
 
+@media (max-width: 999px){
+	#main .entry-content > h3.query-header {
+		width: 24.5rem;
+	}
+}
 
-
+@media (max-width: 1407px){
+	#main .entry-content > h3.query-header {
+		width: 50rem;
+	}
+}
 
 @media (max-width: 1000px){
 	body.singular figure.post-thumbnail img {
@@ -300,7 +315,6 @@ figure.wp-block-video {
 		max-height:800px;
 	}
 }
-
 
 @media (max-width: 700px){
 	main#main div.wp-block-query > ul.is-flex-container,
